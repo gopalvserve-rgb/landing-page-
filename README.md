@@ -4,6 +4,18 @@ This repo contains a standalone `index.html` landing page with embedded CSS + JS
 
 ## Quick Preview Options
 
+### Option -1: Live preview mode (auto-open + LAN URL)
+From the project root:
+
+```bash
+./live-preview.sh
+```
+
+Then open:
+
+- `http://localhost:4173/`
+- or the printed network URL to test on mobile devices in the same Wi‑Fi/LAN.
+
 ### Option 0: One-command preview (recommended)
 From the project root:
 
