@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Luxury Studio Residences | Yamuna Expressway</title>
+  <meta name="description" content="Book a site visit for Smart Luxury Studio Residences at Yamuna Expressway. Get brochure, price sheet, and instant callback." />
+  <style>
+    :root {
+      --gold-1: #d4af37;
+      --gold-2: #f5d76e;
+      --deep-green: #0f9d58;
+      --wa-green: #25d366;
+      --dark: #0e1116;
+      --text: #1d2733;
+      --muted: #667085;
+      --bg: #f6f7f9;
+      --white: #ffffff;
+      --shadow: 0 8px 30px rgba(15, 23, 42, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      padding-bottom: 84px;
+    }
+
+    body.preview-mobile {
+      max-width: 390px;
+      margin: 18px auto;
+      border-radius: 24px;
+      overflow-x: hidden;
+      box-shadow: 0 18px 45px rgba(2, 6, 23, 0.2);
+      border: 10px solid #0f172a;
+      background: #fff;
+      min-height: calc(100vh - 36px);
+      position: relative;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin-inline: auto;
+    }
+
+    .hero {
+      background:
+        linear-gradient(120deg, rgba(14,17,22,0.82), rgba(14,17,22,0.68)),
+        radial-gradient(circle at 20% 20%, rgba(212,175,55,0.2), transparent 40%),
+        #1a1f2b;
+      color: var(--white);
+      padding: 72px 0 56px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: rgba(245, 215, 110, 0.16);
+      border: 1px solid rgba(245, 215, 110, 0.4);
+      color: #ffe7a8;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 12px;
+      letter-spacing: 0.3px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 4.2vw, 3rem);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      color: #e7edf7;
+      max-width: 62ch;
+      margin-bottom: 20px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .btn {
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 30px;
+      font-weight: 700;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
+      min-height: 46px;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.22), 0 10px 24px rgba(15, 23, 42, 0.2);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold-1), var(--gold-2));
+      color: #1f1600;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      color: var(--white);
+    }
+
+    .btn-text {
+      background: transparent;
+      color: #ffe7a8;
+      padding-inline: 10px;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .trust {
+      color: #d3dceb;
+      font-size: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .section {
+      padding: 56px 0;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .price-tag {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #1d2733;
+      margin-bottom: 4px;
+    }
+
+    .muted { color: var(--muted); }
+
+    .lead-form label {
+      font-weight: 600;
+      font-size: 0.92rem;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .lead-form input,
+    .lead-form select,
+    .lead-form textarea {
+      width: 100%;
+      border: 1px solid #d7dbe2;
+      border-radius: 12px;
+      padding: 10px 12px;
+      margin-bottom: 12px;
+      font: inherit;
+      background: #fff;
+    }
+
+    .lead-form textarea { min-height: 80px; resize: vertical; }
+
+    .button-choices {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .choice {
+      background: #f1f4f8;
+      border: 1px solid #dde3ea;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      cursor: pointer;
+    }
+
+    .choice.active {
+      background: #fff7df;
+      border-color: #e3c76e;
+      color: #7f5d00;
+      font-weight: 700;
+    }
+
+    .small-note {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    .floating-wa {
+      position: fixed;
+      right: 16px;
+      bottom: 78px;
+      z-index: 1000;
+    }
+
+    .floating-wa a {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--wa-green);
+      color: #fff;
+      text-decoration: none;
+      display: grid;
+      place-items: center;
+      font-size: 1.45rem;
+      box-shadow: 0 10px 24px rgba(37, 211, 102, 0.38);
+      animation: pulse 2s infinite;
+    }
+
+    .floating-wa .tooltip {
+      position: absolute;
+      right: 64px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #111827;
+      color: #fff;
+      font-size: 0.74rem;
+      padding: 5px 8px;
+      border-radius: 8px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      pointer-events: none;
+    }
+
+    .floating-wa:hover .tooltip,
+    .floating-wa a:focus + .tooltip {
+      opacity: 1;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      height: 60px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-radius: 14px 14px 0 0;
+      box-shadow: 0 -8px 24px rgba(15, 23, 42, 0.22);
+      overflow: hidden;
+    }
+
+    body.preview-mobile .sticky-cta {
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+      width: calc(100% - 20px);
+      max-width: 370px;
+    }
+
+    .sticky-cta a,
+    .sticky-cta button {
+      border: none;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.84rem;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      gap: 2px;
+      line-height: 1.1;
+      cursor: pointer;
+    }
+
+    .call-btn { background: var(--deep-green); }
+    .wa-btn { background: var(--wa-green); }
+    .enquire-btn { background: var(--gold-1); color: #1f1600 !important; }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(6, 13, 24, 0.64);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1200;
+      padding: 16px;
+    }
+
+    .modal {
+      width: min(480px, 100%);
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 20px;
+      position: relative;
+    }
+
+    .modal h3 { margin-bottom: 8px; line-height: 1.25; }
+    .modal p { margin-bottom: 16px; color: var(--muted); }
+
+    .close-modal {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      border: none;
+      background: #eef2f7;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .show { display: flex; }
+
+    .preview-toggle {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 1300;
+      border: none;
+      border-radius: 999px;
+      padding: 9px 14px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      cursor: pointer;
+      color: #1f1600;
+      background: linear-gradient(135deg, var(--gold-1), var(--gold-2));
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.25);
+    }
+
+    .preview-toggle small {
+      font-weight: 600;
+      margin-left: 4px;
+      opacity: 0.85;
+    }
+
+    @media (min-width: 768px) {
+      body { padding-bottom: 0; }
+      .grid { grid-template-columns: 1.1fr 0.9fr; }
+      .sticky-cta { display: none; }
+      .floating-wa { bottom: 20px; }
+      body.preview-mobile { padding-bottom: 84px; }
+      body.preview-mobile .sticky-cta { display: grid; }
+      body.preview-mobile .floating-wa { bottom: 78px; }
+    }
+
+    @media (max-width: 767px) {
+      .preview-toggle { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <button class="preview-toggle" id="previewToggle" type="button" aria-label="Toggle mobile preview mode">
+    Mobile Preview <small>OFF</small>
+  </button>
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow">Luxury Living • Yamuna Expressway</span>
+      <h1>Smart Luxury Studio Residences Designed for High-Growth Investors</h1>
+      <p>Own a premium studio residence in the fastest-growing corridor. Get exclusive launch pricing, complete payment plans, and immediate possession insights from our project advisor.</p>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#lead-form" data-track="book_site_visit">Book Site Visit</a>
+        <a class="btn btn-outline" href="https://wa.me/919999999999?text=Hi,%20I'm%20interested%20in%20Smart%20Luxury%20Studio%20Residences%20at%20Yamuna%20Expressway.%20Please%20share%20details." target="_blank" rel="noopener" data-track="hero_whatsapp">WhatsApp Now</a>
+        <button class="btn btn-text brochure-trigger" data-download="brochure.pdf" data-track="hero_brochure">Download Brochure</button>
+      </div>
+
+      <div class="trust">
+        <span>✔ Instant Callback</span>
+        <span>✔ No Spam Guarantee</span>
+        <span>✔ Limited Units Available</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container grid">
+        <article class="card">
+          <h2>Pricing & Availability</h2>
+          <p class="price-tag">Starting ₹39.9L*</p>
+          <p class="muted">Early-bird pricing, rental assurance options, and curated investor support.</p>
+          <br />
+          <button class="btn btn-primary brochure-trigger" data-download="price-sheet-and-brochure.pdf" data-track="price_brochure">Get Price Sheet + Brochure</button>
+          <p class="small-note">*Limited period launch inventory. Prices subject to change without prior notice.</p>
+        </article>
+
+        <aside class="card" id="lead-form">
+          <h2>Enquire Now</h2>
+          <p class="muted">Share your details and our specialist will connect within minutes.</p>
+
+          <form class="lead-form" id="mainLeadForm">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" required placeholder="Enter your full name" />
+
+            <label for="phone">Mobile Number</label>
+            <input id="phone" name="phone" required placeholder="+91" />
+
+            <label>Preferred Action</label>
+            <div class="button-choices" id="leadButtonChoices">
+              <button class="choice active" type="button" data-value="Get Details Now">Get Details Now</button>
+              <button class="choice" type="button" data-value="Unlock Price">Unlock Price</button>
+              <button class="choice" type="button" data-value="Schedule Site Visit">Schedule Site Visit</button>
+            </div>
+
+            <input type="hidden" id="preferredAction" name="preferredAction" value="Get Details Now" />
+
+            <button type="submit" class="btn btn-primary" id="leadSubmitBtn">Get Details Now</button>
+
+            <div class="trust" style="margin-top: 10px; color: #526176;">
+              <span>✔ Instant Callback</span>
+              <span>✔ No Spam Guarantee</span>
+              <span>✔ Limited Units Available</span>
+            </div>
+          </form>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div class="floating-wa">
+    <a href="https://wa.me/919999999999?text=Hi,%20I'm%20interested%20in%20Smart%20Luxury%20Studio%20Residences%20at%20Yamuna%20Expressway.%20Please%20share%20details." target="_blank" rel="noopener" aria-label="WhatsApp Chat" data-track="floating_whatsapp">💬</a>
+    <span class="tooltip">Chat with us</span>
+  </div>
+
+  <div class="sticky-cta" aria-label="Quick contact actions">
+    <a class="call-btn" href="tel:+919999999999" data-track="sticky_call"><span>📞</span><span>Call Now</span></a>
+    <a class="wa-btn" href="https://wa.me/919999999999?text=Hi,%20I'm%20interested%20in%20Smart%20Luxury%20Studio%20Residences%20at%20Yamuna%20Expressway.%20Please%20share%20details." target="_blank" rel="noopener" data-track="sticky_whatsapp"><span>💬</span><span>WhatsApp</span></a>
+    <button class="enquire-btn" id="stickyEnquireBtn" type="button" data-track="sticky_enquire"><span>✉️</span><span>Enquire Now</span></button>
+  </div>
+
+  <div class="modal-backdrop" id="exitModalBackdrop" role="dialog" aria-modal="true" aria-labelledby="exitTitle">
+    <div class="modal">
+      <button class="close-modal" id="closeExitModal" type="button" aria-label="Close popup">✕</button>
+      <h3 id="exitTitle">Wait! Get Exclusive Price Sheet</h3>
+      <p>Before you leave, download our latest brochure and launch price list.</p>
+      <div class="cta-row" style="margin-bottom: 0;">
+        <button class="btn btn-primary brochure-trigger" data-download="exclusive-price-sheet.pdf" data-track="exit_brochure">Download Brochure Before You Leave</button>
+        <a class="btn btn-outline" style="border-color:#d4af37;color:#7f5d00;" href="https://wa.me/919999999999?text=Hi,%20I'm%20interested%20in%20Smart%20Luxury%20Studio%20Residences%20at%20Yamuna%20Expressway.%20Please%20share%20details." target="_blank" rel="noopener" data-track="exit_whatsapp">WhatsApp Now</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="brochureModalBackdrop" role="dialog" aria-modal="true" aria-labelledby="brochureTitle">
+    <div class="modal">
+      <button class="close-modal" id="closeBrochureModal" type="button" aria-label="Close popup">✕</button>
+      <h3 id="brochureTitle">Unlock Brochure Access</h3>
+      <p>Share details to download the brochure instantly.</p>
+
+      <form class="lead-form" id="brochureLeadForm">
+        <label for="bname">Name</label>
+        <input id="bname" name="name" required placeholder="Enter your full name" />
+
+        <label for="bphone">Phone</label>
+        <input id="bphone" name="phone" required placeholder="+91" />
+
+        <button type="submit" class="btn btn-primary">Unlock Price</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const phoneNumber = '+919999999999';
+    const whatsappURL = 'https://wa.me/919999999999?text=Hi,%20I\'m%20interested%20in%20Smart%20Luxury%20Studio%20Residences%20at%20Yamuna%20Expressway.%20Please%20share%20details.';
+    const previewToggle = document.getElementById('previewToggle');
+
+    function trackEvent(eventName, params = {}) {
+      if (typeof gtag === 'function') {
+        gtag('event', eventName, params);
+      }
+      if (typeof dataLayer !== 'undefined') {
+        dataLayer.push({ event: eventName, ...params });
+      }
+      console.log('[Tracking]', eventName, params);
+    }
+
+    document.querySelectorAll('[data-track]').forEach((el) => {
+      el.addEventListener('click', () => {
+        const action = el.getAttribute('data-track');
+        const category = action.includes('whatsapp') ? 'whatsapp_click' : (action.includes('call') ? 'call_click' : 'cta_click');
+        trackEvent(category, { action, page: 'landing_page' });
+      });
+    });
+
+    previewToggle?.addEventListener('click', () => {
+      document.body.classList.toggle('preview-mobile');
+      const isActive = document.body.classList.contains('preview-mobile');
+      previewToggle.innerHTML = `Mobile Preview <small>${isActive ? 'ON' : 'OFF'}</small>`;
+      trackEvent('preview_mode_toggle', { enabled: isActive });
+    });
+
+    const stickyEnquireBtn = document.getElementById('stickyEnquireBtn');
+    stickyEnquireBtn.addEventListener('click', () => {
+      document.getElementById('lead-form').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    const leadChoices = document.querySelectorAll('.choice');
+    const preferredAction = document.getElementById('preferredAction');
+    const submitBtn = document.getElementById('leadSubmitBtn');
+
+    leadChoices.forEach((choice) => {
+      choice.addEventListener('click', () => {
+        leadChoices.forEach((item) => item.classList.remove('active'));
+        choice.classList.add('active');
+        const value = choice.dataset.value;
+        preferredAction.value = value;
+        submitBtn.textContent = value;
+      });
+    });
+
+    document.getElementById('mainLeadForm').addEventListener('submit', (event) => {
+      event.preventDefault();
+      trackEvent('lead_submit', {
+        source: 'main_form',
+        cta_text: preferredAction.value
+      });
+      alert('Thank you! Our advisor will call you shortly.');
+    });
+
+    const brochureModalBackdrop = document.getElementById('brochureModalBackdrop');
+    const closeBrochureModal = document.getElementById('closeBrochureModal');
+    let pendingDownloadFile = '';
+
+    function openBrochureModal(fileName = 'brochure.pdf') {
+      pendingDownloadFile = fileName;
+      brochureModalBackdrop.classList.add('show');
+    }
+
+    function closeBrochure() {
+      brochureModalBackdrop.classList.remove('show');
+    }
+
+    closeBrochureModal.addEventListener('click', closeBrochure);
+    brochureModalBackdrop.addEventListener('click', (e) => {
+      if (e.target === brochureModalBackdrop) closeBrochure();
+    });
+
+    document.querySelectorAll('.brochure-trigger').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const fileName = btn.dataset.download || 'brochure.pdf';
+        trackEvent('brochure_intent', { source: btn.dataset.track || 'unknown' });
+        openBrochureModal(fileName);
+      });
+    });
+
+    document.getElementById('brochureLeadForm').addEventListener('submit', (event) => {
+      event.preventDefault();
+      trackEvent('brochure_download_unlocked', { file: pendingDownloadFile });
+
+      const link = document.createElement('a');
+      link.href = pendingDownloadFile;
+      link.download = pendingDownloadFile;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      closeBrochure();
+      alert('Your download is starting. Our team will connect with details.');
+    });
+
+    const exitModalBackdrop = document.getElementById('exitModalBackdrop');
+    const closeExitModal = document.getElementById('closeExitModal');
+    let exitShown = false;
+
+    function showExitModal() {
+      if (exitShown) return;
+      exitShown = true;
+      exitModalBackdrop.classList.add('show');
+      trackEvent('exit_intent_popup_shown', { page: 'landing_page' });
+    }
+
+    closeExitModal.addEventListener('click', () => exitModalBackdrop.classList.remove('show'));
+    exitModalBackdrop.addEventListener('click', (e) => {
+      if (e.target === exitModalBackdrop) exitModalBackdrop.classList.remove('show');
+    });
+
+    document.addEventListener('mouseout', (event) => {
+      if (event.clientY <= 0) {
+        showExitModal();
+      }
+    });
+
+    let lastScrollY = window.scrollY;
+    let upScrollCount = 0;
+    window.addEventListener('scroll', () => {
+      const currentY = window.scrollY;
+      if (currentY < lastScrollY) {
+        upScrollCount += 1;
+      }
+      if (upScrollCount > 6 && currentY > 120) {
+        showExitModal();
+      }
+      lastScrollY = currentY;
+    }, { passive: true });
+  </script>
+</body>
+</html>
