@@ -50,6 +50,20 @@ Then open:
 
 - `http://localhost:4173/`
 
+## Publish on GitHub (GitHub Pages)
+
+This repository now includes an automated workflow at:
+
+- `.github/workflows/deploy-pages.yml`
+
+### Steps
+1. Create a new GitHub repository and push this project.
+2. Ensure your default branch is `main` (workflow deploys on push to `main`).
+3. In GitHub repo settings, open **Pages** and set **Source** to **GitHub Actions**.
+4. Push any commit to `main` (or run workflow manually from **Actions** tab).
+5. Your landing page will be available at:
+   - `https://<your-github-username>.github.io/<repo-name>/`
+
 ## Visual QA Checklist (Step-by-step)
 1. Open the page in browser.
 2. Confirm the top-left **Preview** tab-style button is visible and clickable.
