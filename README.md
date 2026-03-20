@@ -52,13 +52,15 @@ Then open:
 
 ## Visual QA Checklist (Step-by-step)
 1. Open the page in browser.
-2. Verify Hero CTAs are visible: **Book Site Visit**, **WhatsApp Now**, **Download Brochure**.
-3. Resize browser to mobile width (or use device emulation).
-4. Confirm sticky 3-button footer is always visible on mobile.
-5. Confirm floating WhatsApp button appears above sticky bar.
-6. Click **Download Brochure** and verify lead-popup appears before download.
-7. Scroll up/attempt exit and verify exit-intent popup appears.
-8. Submit lead form and brochure form to confirm interaction flow.
+2. Confirm the top-left **Preview** tab-style button is visible and clickable.
+3. Click **Preview** and verify it scrolls back to top.
+4. Verify Hero CTAs are visible: **Book Site Visit**, **WhatsApp Now**, **Download Brochure**.
+5. Resize browser to mobile width (or use device emulation).
+6. Confirm sticky 3-button footer is always visible on mobile.
+7. Confirm floating WhatsApp button appears above sticky bar.
+8. Click **Download Brochure** and verify lead-popup appears before download.
+9. Scroll up/attempt exit and verify exit-intent popup appears.
+10. Submit lead form and brochure form to confirm interaction flow.
 
 ## Notes
 - All styling and scripting are embedded directly in `index.html`.

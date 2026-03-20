@@ -35,6 +35,7 @@
       background: var(--bg);
       line-height: 1.6;
       padding-bottom: 84px;
+      padding-top: 54px;
     }
 
     body.preview-mobile {
@@ -52,6 +53,40 @@
     .container {
       width: min(1120px, 92%);
       margin-inline: auto;
+    }
+
+    .top-tabs {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1400;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .tab-btn {
+      border: 1px solid #d0d5dd;
+      border-radius: 8px;
+      background: #fff;
+      color: #344054;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 6px 10px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .tab-btn.active {
+      border-color: #1d4ed8;
+      color: #1d4ed8;
+      background: #eef4ff;
     }
 
     .hero {
@@ -377,6 +412,13 @@
       body.preview-mobile { padding-bottom: 84px; }
       body.preview-mobile .sticky-cta { display: grid; }
       body.preview-mobile .floating-wa { bottom: 78px; }
+      body.preview-mobile .top-tabs {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        width: calc(100% - 20px);
+        max-width: 370px;
+      }
     }
 
     @media (max-width: 767px) {
@@ -385,6 +427,10 @@
   </style>
 </head>
 <body>
+  <div class="top-tabs" aria-label="Top utility tabs">
+    <button class="tab-btn active" id="previewTabBtn" type="button">Preview</button>
+  </div>
+
   <button class="preview-toggle" id="previewToggle" type="button" aria-label="Toggle mobile preview mode">
     Mobile Preview <small>OFF</small>
   </button>
@@ -498,6 +544,7 @@
     const phoneNumber = '+919999999999';
     const whatsappURL = 'https://wa.me/919999999999?text=Hi,%20I\'m%20interested%20in%20Smart%20Luxury%20Studio%20Residences%20at%20Yamuna%20Expressway.%20Please%20share%20details.';
     const previewToggle = document.getElementById('previewToggle');
+    const previewTabBtn = document.getElementById('previewTabBtn');
 
     function trackEvent(eventName, params = {}) {
       if (typeof gtag === 'function') {
@@ -522,6 +569,11 @@
       const isActive = document.body.classList.contains('preview-mobile');
       previewToggle.innerHTML = `Mobile Preview <small>${isActive ? 'ON' : 'OFF'}</small>`;
       trackEvent('preview_mode_toggle', { enabled: isActive });
+    });
+
+    previewTabBtn?.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      trackEvent('preview_tab_click', { section: 'top_tabs' });
     });
 
     const stickyEnquireBtn = document.getElementById('stickyEnquireBtn');
